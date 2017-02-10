@@ -1,0 +1,20 @@
+.login {
+    width: 50%;
+    display: inline-block;
+    margin: auto !important;
+    /* text-align: center; */
+    padding: 50px;
+    /* border: 1px solid; */
+}
+form.login-form {
+    border: 1px solid #e2e2e2;
+    margin: auto !important;
+    padding: 55px 182px;
+}
+.field {
+    margin: 20px 0px;
+}
+input[type="text"],input[type="password"] {
+    height: 30px;
+    padding: 0px 10px;
+}
