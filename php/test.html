@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('#salary_filter').on('change', function() {
+			var $el = $(this);
+			alert($el);
+            if( $el.prop('checked') ) {
+				$('select[name="orderBy"] option:eq(0)').text("Highest Salary");   
+				$('select[name="orderBy"] option:eq(1)').text("Lowest Salary");   
+			}else{
+				$('select[name="orderBy"] option:eq(0)').text("New Jobs");   
+				$('select[name="orderBy"] option:eq(1)').text("Old Jobs"); 
+			}
+    });
+});
+</script>
+</head>
+<body>
+
+<div class="checkbox">
+	<label>
+		<input type="checkbox" name="salary" class="checkbox_check" id="salary_filter"> Filter by Salary
+	</label>
+</div>
+<div class="form-group" id="">
+<label for="location">Filter By</label>
+<select id="SortSelects" name="orderBy" class="form-control">
+	<option value="desc">New jobs</option>
+	<option value="asc">Old jobs</option>
+</select>
+<input type="hidden" name="catid" id="cat_id" value="<?php echo $id ?>"/>
+</div>
+
+</body>
+</html>
